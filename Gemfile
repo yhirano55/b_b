@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
-
-# Specify your gem's dependencies in b_b.gemspec
 gemspec
+
+group :development, :test do
+  gem 'pry'
+  gem 'factory_girl'
+  gem 'faker'
+end
