@@ -2,7 +2,10 @@
 
 (b_b) is SQL Query Builder for [Google BigQuery](https://cloud.google.com/bigquery)
 
-[![Build Status](https://travis-ci.org/yhirano55/b_b.svg?branch=master)](https://travis-ci.org/yhirano55/b_b) [![Coverage Status](https://coveralls.io/repos/github/yhirano55/b_b/badge.svg?branch=master)](https://coveralls.io/github/yhirano55/b_b?branch=master) [![codebeat badge](https://codebeat.co/badges/5e694b1a-93b1-4fda-ad6e-3dc0d5afe76b)](https://codebeat.co/projects/github-com-yhirano55-b_b)
+[![Dependency Status](https://gemnasium.com/badges/github.com/yhirano55/b_b.svg)](https://gemnasium.com/github.com/yhirano55/b_b)
+[![Build Status](https://travis-ci.org/yhirano55/b_b.svg?branch=master)](https://travis-ci.org/yhirano55/b_b)
+[![Coverage Status](https://coveralls.io/repos/github/yhirano55/b_b/badge.svg?branch=master)](https://coveralls.io/github/yhirano55/b_b?branch=master)
+[![codebeat badge](https://codebeat.co/badges/5e694b1a-93b1-4fda-ad6e-3dc0d5afe76b)](https://codebeat.co/projects/github-com-yhirano55-b_b)
 
 ## Install
 
