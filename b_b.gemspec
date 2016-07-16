@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 2.0.0"
 
-  spec.summary       = "SQL Query Builder in Ruby for Google BigQuery"
-  spec.description   = "SQL Query Builder in Ruby for Google BigQuery"
+  spec.summary       = "(b_b) is SQL Query Builder for Google BigQuery"
+  spec.description   = "(b_b) is SQL Query Builder for Google BigQuery"
   spec.homepage      = "https://github.com/yhirano55/BB"
   spec.license       = "MIT"
 
