@@ -2,6 +2,7 @@
 
 (b_b) is SQL Query Builder for [Google BigQuery](https://cloud.google.com/bigquery)
 
+[![Gem Version](https://badge.fury.io/rb/b_b.svg)](https://badge.fury.io/rb/b_b)
 [![Dependency Status](https://gemnasium.com/badges/github.com/yhirano55/b_b.svg)](https://gemnasium.com/github.com/yhirano55/b_b)
 [![Build Status](https://travis-ci.org/yhirano55/b_b.svg?branch=master)](https://travis-ci.org/yhirano55/b_b)
 [![Coverage Status](https://coveralls.io/repos/github/yhirano55/b_b/badge.svg?branch=master&key=201607161500)](https://coveralls.io/github/yhirano55/b_b?branch=master)
