@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "(b_b) is SQL Query Builder for Google BigQuery"
   spec.description   = "(b_b) is SQL Query Builder for Google BigQuery"
-  spec.homepage      = "https://github.com/yhirano55/BB"
+  spec.homepage      = "https://github.com/yhirano55/b_b"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
