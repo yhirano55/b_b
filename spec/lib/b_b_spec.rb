@@ -1,42 +1,6 @@
 require "spec_helper"
 
 describe BB do
-  describe ".build" do
-    let(:result) do
-      format_sql <<-SQL
-      SELECT
-        id,
-        name,
-        country_id,
-        countries.song AS song
-      FROM
-        member AS member
-      JOIN
-        countries AS countries
-      ON
-        member.country_id = countries.id
-      ORDER BY
-        id DESC
-      LIMIT
-        300 OFFSET 100
-      SQL
-    end
-
-    subject do
-      BB.build do |rel|
-        rel.select :id, :name, :country_id, "countries.song AS song"
-        rel.from :member, as: :member
-        rel.join :countries, as: :countries
-        rel.on "member.country_id = countries.id"
-        rel.order id: :desc
-        rel.limit 300
-        rel.offset 100
-      end
-    end
-
-    it { is_expected.to eq result }
-  end
-
   describe ".method_missing" do
     BB::API.values.flatten.each do |method_name|
       context "Relation##{method_name}" do
@@ -62,6 +26,36 @@ describe BB do
 
         it { is_expected.to be_an_instance_of(BB::Relation) }
       end
+    end
+
+    context "undefined method" do
+      subject { described_class.undefined_method }
+
+      it { expect { subject }.to raise_error(NoMethodError) }
+    end
+  end
+
+  describe ".respond_to?" do
+    BB::API.values.flatten.each do |method_name|
+      context "Relation##{method_name}" do
+        subject { described_class.respond_to?(method_name) }
+
+        it { is_expected.to be true }
+      end
+    end
+
+    %i(and or not).each do |method_name|
+      context "Relation##{method_name}" do
+        subject { described_class.respond_to?(method_name) }
+
+        it { is_expected.to be true }
+      end
+    end
+
+    context "undefined method" do
+      subject { described_class.respond_to?(:undefined_method) }
+
+      it { is_expected.to be false }
     end
   end
 end

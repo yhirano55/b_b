@@ -45,14 +45,21 @@ module BB
   }.freeze
 
   class << self
-    def build
-      relation = Relation.new
-      yield(relation)
-      relation.to_sql
+    # Delegate to BB::Relation
+    def method_missing(method, *args, &block)
+      return super unless relation.respond_to?(method)
+      relation.send(method, *args, &block)
     end
 
-    def method_missing(name, *args)
-      Relation.new.public_send(name, *args)
+    # Delegate to BB::Relation
+    def respond_to?(method, include_all = false)
+      relation.respond_to?(method, include_all) || super
+    end
+
+    private
+
+    def relation
+      Relation.new
     end
   end
 end
